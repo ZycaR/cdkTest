@@ -1,0 +1,13 @@
+<div cdkDropListGroup class="group">
+
+    <div class="list" cdkDropList [cdkDropListData]="todos" (cdkDropListDropped)="drop($event)">
+        <div cdkDrag *ngFor="let item of todos" class="item">{{item.text}}</div>
+    </div>
+
+    <!-- app-portals -->
+    <div class="list" cdkDropList [cdkDropListData]="dones" (cdkDropListDropped)="drop($event)">
+        <div cdkDrag *ngFor="let item of dones" class="item">{{item.text}}</div>
+    </div>
+    <!-- /app-portals -->
+
+</div>

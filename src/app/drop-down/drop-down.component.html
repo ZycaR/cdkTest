@@ -1,0 +1,14 @@
+<div style="height:800px;">&nbsp;</div>
+<button cdkOverlayOrigin #trigger="cdkOverlayOrigin" type="button" (click)="expanded = !expanded">
+    open -> {{expanded}}</button>
+<div style="height:800px;">&nbsp;</div>
+
+
+<ng-template 
+    cdkConnectedOverlay
+    [cdkConnectedOverlayOrigin]="trigger"
+    [cdkConnectedOverlayOpen]="expanded">
+    <div #dialog role="dialog" aria-label="Dialog" class="overlay">
+        <p style="width: 400px; height:400px; background-color:cornflowerblue; border: 1px solid black;">template</p>
+    </div>
+</ng-template>
